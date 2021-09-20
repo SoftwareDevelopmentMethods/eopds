@@ -19,16 +19,14 @@ class AccordionItem extends Component {
                     </button>
                 </h2>
                 <div id={`panelsStayOpen-collapse${number}`} class="accordion-collapse collapse" aria-labelledby={`panelsStayOpen-heading${number}`}>
-                    <div className="accordion-body">
-                        <ul class="list-group">
-                            {this.props.goals.activity.map((act, i) => (
-                                <li class="list-group-item active" key={`ActiveListKey${i}`}>{act}</li>
-                            ))}
+                    <div class="list-group">
+                        {this.props.goals.activity.map((act, i) => (
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-warning" key={`ActiveListKey${i}`}> {act} </a>
+                        ))}
 
-                            {this.props.goals.strategy.map((str, i) => (
-                                <li class="list-group-item" key={`ListKey${i}`}>{str}</li>
-                            ))}
-                        </ul>
+                        {this.props.goals.strategy.map((str, i) => (
+                            <a href="#" class="list-group-item list-group-item-action" key={`ListKey${i}`}>{str}</a>
+                        ))}
                     </div>
                 </div>
             </div>
