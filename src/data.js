@@ -1,29 +1,29 @@
 
 
-class data extends Component{
+class data extends Component {
     static defaultProps = {
-        goals:  [
+        goals: [
             {
-               goal: "Understanding team norms",
-               activity: [
-                   "Peer Support",
-                   "Team Leader Assistance"
-               ],
-               strategy: [
-                   "Mentoring",
-                   "Team Socialising",
-                   "Stand ups",
-                   "Pair Programming",
-                   "Simple Task",
-                   "Other Teams",
-                   "Electronic Communication",
-                   "Set Expectations",
-                   "Review Plan",
-                   "Retrospective",
-                   "Team Agreement",
-                   "River of Life",
-                   "Checklists"
-               ] 
+                goal: "Understanding team norms",
+                activity: [
+                    "Peer Support",
+                    "Team Leader Assistance"
+                ],
+                strategy: [
+                    "Mentoring",
+                    "Team Socialising",
+                    "Stand ups",
+                    "Pair Programming",
+                    "Simple Task",
+                    "Other Teams",
+                    "Electronic Communication",
+                    "Set Expectations",
+                    "Review Plan",
+                    "Retrospective",
+                    "Team Agreement",
+                    "River of Life",
+                    "Checklists"
+                ]
             },
             {
                 goal: "Understanding company culture",
@@ -56,7 +56,7 @@ class data extends Component{
                     "Stand ups",
                     "Other Teams",
                     "Electronic Communication"
-                ]   
+                ]
             },
             {
                 goal: "Understand other's expectations of your own role's responsibilities",
