@@ -20,7 +20,7 @@ class Accordion extends Component {
                     </div>
                 </div>
                 {this.props.goal.map((item, ind) => (
-                    <AccordionItem key={`$Key{ind}`} index={ind} goal={item.goal} />
+                    <AccordionItem key={`Key${ind}`} index={ind} goals={item} />
                 ))}
 
 
