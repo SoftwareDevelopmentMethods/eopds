@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
-import Profile from './Profile';
-import Accordion from './Accordion';
+import Routes from "./Routes";
+
 import './App.css';
 
 class App extends Component {
@@ -205,8 +205,9 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <Profile />
-        <Accordion goal={this.props.goals} />
+        <Routes goal={this.props.goals} />
+        {/* <Profile /> */}
+        {/* <Accordion goal={this.props.goals} /> */}
       </div>
     );
   }
