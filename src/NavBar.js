@@ -15,7 +15,8 @@ class NavBar extends Component {
                         <div className="navbar-nav">
                             <NavLink exact className="nav-link active" aria-current="page" to="/">Home</NavLink>
                             <NavLink exact className="nav-link" to="/onboarder">Onboarder</NavLink>
-                            <NavLink exact className="nav-link" to="/designer">Program Desiner</NavLink>
+                            <NavLink exact className="nav-link" to="/designer">Program Designer</NavLink>
+                            <NavLink exact className="nav-link" to="/goalmanager">Goal Manager</NavLink>
                             <NavLink exact className="nav-link" to="/teamleader">Team Leader</NavLink>
                         </div>
                     </div>

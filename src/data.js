@@ -4,6 +4,7 @@ class data extends Component {
     static defaultProps = {
         goals: [
             {
+                id: 1,
                 goal: "Understanding team norms",
                 activity: [
                     "Peer Support",
@@ -26,6 +27,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 2,
                 goal: "Understanding company culture",
                 activity: [
                     "Induction"
@@ -42,6 +44,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 3,
                 goal: "Knowing the responsibilities, expertise and authority of other team members",
                 activity: [
                     "Agile Course",
@@ -59,6 +62,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 4,
                 goal: "Understand other's expectations of your own role's responsibilities",
                 activity: [
                     "Agile Course",
@@ -77,6 +81,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 5,
                 goal: "Understand what work to do and when",
                 activity: [
                     "Agile Course",
@@ -94,6 +99,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 6,
                 goal: "Understand the project structure and aims and the implications",
                 activity: [
                     "Team Leader Assistance",
@@ -111,6 +117,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 7,
                 goal: "Understand how to code and test to the team's expectations",
                 activity: [
                     "Mentoring",
@@ -130,6 +137,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 8,
                 goal: "Understand and meet the team's standards of work quality",
                 activity: [
                     "Agile Course"
@@ -143,6 +151,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 9,
                 goal: "Understand and show the agile mind set",
                 activity: [
                     "Agile Course",
@@ -161,6 +170,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 10,
                 goal: "Know how to use artefacts, tools, technology and techniques that are part of the team's development process",
                 activity: [
                     "Agile Course",
@@ -177,6 +187,7 @@ class data extends Component {
                 ]
             },
             {
+                id: 11,
                 goal: "Understand the project domain knowledge and terminology",
                 activity: [
                     "Product Overview",

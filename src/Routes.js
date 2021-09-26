@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Accordion from './Accordion';
 import Designer from './Designer';
+import GoalManager from "./Goal Manager";
 
 class Routes extends Component {
     render() {
@@ -22,6 +23,11 @@ class Routes extends Component {
                     exact
                     path='/designer'
                     render={() => <Designer goal={this.props.goal} />}
+                />
+                <Route
+                    exact
+                    path='/goalmanager'
+                    render={() => <GoalManager goal={this.props.goal} />}
                 />
                 <Route
                     exact
