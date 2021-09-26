@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Accordion from './Accordion';
-import Designer from './Designer';
+// import Designer from './Designer';
 import GoalManager from "./Goal Manager";
+import Home from "./Home";
 
 class Routes extends Component {
     render() {
@@ -12,21 +13,21 @@ class Routes extends Component {
                 <Route
                     exact
                     path='/'
-                    render={() => <Accordion goal={this.props.goal} />}
+                    render={() => <Home />}
                 />
                 <Route
                     exact
                     path='/onboarder'
                     render={() => <Accordion goal={this.props.goal} />}
                 />
-                <Route
+                {/* <Route
                     exact
                     path='/designer'
                     render={() => <Designer goal={this.props.goal} />}
-                />
+                /> */}
                 <Route
                     exact
-                    path='/goalmanager'
+                    path='/designer'
                     render={() => <GoalManager goal={this.props.goal} />}
                 />
                 <Route

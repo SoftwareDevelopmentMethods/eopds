@@ -22,17 +22,17 @@ class AccordionItem extends Component {
                 <div id={`panelsStayOpen-collapse${number}`} class="accordion-collapse collapse" aria-labelledby={`panelsStayOpen-heading${number}`}>
                     <div class="list-group">
                         {this.props.goals.activity.map((act, i) => (
-                            <a href="#" class="list-group-item list-group-item-action list-group-item-warning" key={`ActiveListKey${i}`}> {act} 
-                            <button type = "button" button id={`activityCompletion${i}`} onClick={() => (document.getElementById(`activityCompletion${i}`).innerHTML = "Complete")}>Start</button>
+                            <a href="#" class="text-start list-group-item list-group-item-action list-group-item-warning" key={`ActiveListKey${i}`}> {act}
+                                <button type="button" button id={`activityCompletion${i}`} onClick={() => (document.getElementById(`activityCompletion${i}`).innerHTML = "Complete")}>Start</button>
                             </a>
-                            
+
                         ))}
 
                         {this.props.goals.strategy.map((str, i) => (
-                            <a href="#" class="list-group-item list-group-item-action" key={`ListKey${i}`}>{str}
-                            <button type = "button" button id={`strategyCompletion${i}`} onClick={() => (document.getElementById(`strategyCompletion${i}`).innerHTML = "Complete")}>Start</button>
-                             </a>
-                        ))} 
+                            <a href="#" class="text-start list-group-item list-group-item-action" key={`ListKey${i}`}>{str}
+                                <button type="button" button id={`strategyCompletion${i}`} onClick={() => (document.getElementById(`strategyCompletion${i}`).innerHTML = "Complete")}>Start</button>
+                            </a>
+                        ))}
                     </div>
                 </div>
             </div>

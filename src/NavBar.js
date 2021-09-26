@@ -13,10 +13,10 @@ class NavBar extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
-                            <NavLink exact className="nav-link active" aria-current="page" to="/">Home</NavLink>
+                            {/* <NavLink exact className="nav-link active" aria-current="page" to="/">Home</NavLink> */}
                             <NavLink exact className="nav-link" to="/onboarder">Onboarder</NavLink>
                             <NavLink exact className="nav-link" to="/designer">Program Designer</NavLink>
-                            <NavLink exact className="nav-link" to="/goalmanager">Goal Manager</NavLink>
+                            {/* <NavLink exact className="nav-link" to="/goalmanager">Goal Manager</NavLink> */}
                             <NavLink exact className="nav-link" to="/teamleader">Team Leader</NavLink>
                         </div>
                     </div>

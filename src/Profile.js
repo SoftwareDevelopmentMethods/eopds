@@ -6,7 +6,7 @@ class Profile extends Component {
             <div className="card" style={{ width: "18rem" }}>
                 <img src='whiskey.jpg' class="card-img-top" alt="Whiskey Onboarder" />
                 <div className="card-body">
-                    <p className="card-text">{this.props.name || "Best Onboarder Ever!"}</p>
+                    <p className="card-text">Onboarder name: {this.props.name || "Best Onboarder Ever!"}</p>
                 </div>
             </div>
         );
