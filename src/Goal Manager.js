@@ -25,10 +25,14 @@ class GoalManager extends Component {
         }
 
         let goalName = !event.target.checked ? null : val;
+
+        // activities and strategies filters to find them
         let activityList = this.props.goal.find(e => e.goal === val);
         let strategyList = this.props.goal.find(e => e.goal === val);
 
         let filteredGoals = this.state.goals.filter(goal => goal.name !== val);
+
+        // filter the activities and strategies 
         let filteredActivites = this.state.activities.filter(act => !activityList.activity.includes(act));
         let filteredStrategies = this.state.strategies.filter(str => !strategyList.strategy.includes(str));
 
