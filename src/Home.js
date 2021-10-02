@@ -15,7 +15,9 @@ class Home extends Component {
                             <Link type="button" class="btn btn-outline-primary" to="/designer">Program Designer</Link>
                             <Link type="button" class="btn btn-outline-primary" to="/teamleader">Team Leader</Link>
                         </div>
+                        <p class="card-text">Authors: Alastair, Calvin, Sergey!</p>
                     </div>
+
                 </div>
             </div>
         );
