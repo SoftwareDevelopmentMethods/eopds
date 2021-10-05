@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import Accordion from './Accordion';
 import GoalManager from "./Goal Manager";
 import Home from "./Home";
+import TeamLeader from "./TeamLeader";
 
 class Routes extends Component {
     render() {
@@ -27,7 +28,7 @@ class Routes extends Component {
                 <Route
                     exact
                     path='/teamleader'
-                    render={() => <p>Teamleader</p>}
+                    render={() => <TeamLeader/>}
                 />
                 <Redirect to='/' />
             </Switch>
