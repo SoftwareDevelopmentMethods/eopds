@@ -1,4 +1,5 @@
 
+import React, { Component } from 'react';
 
 class data extends Component {
     static defaultProps = {
@@ -208,3 +209,5 @@ class data extends Component {
         ]
     }
 }
+
+export default data;

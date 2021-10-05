@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Accordion from './Accordion';
-import GoalManager from "./Goal Manager";
+import GoalManager from "./GoalManager";
 import Home from "./Home";
 
 class Routes extends Component {
