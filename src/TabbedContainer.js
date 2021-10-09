@@ -1,16 +1,22 @@
 import React, { Component } from "react";
 import Profile from './Profile';
 
+import './TabbedContainer.css';
+
 class TabbedContainer extends Component {
     state = {
         tabs: [
-          { id: 1, name: "Phase 1"},
-          { id: 2, name: "Phase 2"}
+          { id: 1, name: "Phase 1", activities: []},
+          { id: 2, name: "Phase 2", activities: []}
         ],
-        currentTab: { id: 1, name: "Tab 1"},
+        currentTab: { id: 1, name: "Phase 1", activities: []},
         editMode: false,
         editTabNameMode: false
       };
+
+      addToActivities = (activity) => {
+        this.state.activities = [...this.state, activity];
+      }
     
       handleDoubleClick = () => {
         this.setState({
@@ -60,8 +66,8 @@ class TabbedContainer extends Component {
                   onChange={this.handleEditTabName}
                 />
               ) : (
-                <button
-                  className={currentTab.id === tab.id ? "tab active" : "tab"}
+                <button 
+                  className={currentTab.id === tab.id ? "tab active btn btn-primary" : "tab btn btn-primary"}
                   onClick={() => this.handleSelectTab(tab)}
                   onDoubleClick={() => this.handleDoubleClick(tab)}
                 >
@@ -150,20 +156,22 @@ class TabbedContainer extends Component {
       render() {
         const { currentTab, editMode } = this.state;
         return (
-          <div className="container">
+          <div className="container">    
+          <h2>Iterations Plan</h2>
+                        <h3>{this.state.currentTab.name}</h3>
             <div className="well">
-              <button className="add-tab-button well-btn" onClick={this.handleAddTab}>
+              <button className="add-tab-button well-btn btn btn-primary" onClick={this.handleAddTab}>
                 <i className="text-primary fas fa-plus-square" /> Add Tab
               </button>
-              <button className="well-btn"  onClick={() => this.handleDeleteTab(currentTab)}>
-                          Delete
+              <button className="delete-tab-button well-btn btn btn-primary" onClick={() => this.handleDeleteTab(currentTab)}>
+                          Delete current Phase
               </button>
               {this.createTabs()}
               <div className="tab-content">
                 {editMode ? (
                   <div>
                    
-                    <button className="save-button" onClick={this.setEditMode}>
+                    <button className="save-button btn btn-primary" onClick={this.setEditMode}>
                       Done
                     </button>
                   </div>

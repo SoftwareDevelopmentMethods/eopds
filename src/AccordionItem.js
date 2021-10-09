@@ -16,7 +16,7 @@ class AccordionItem extends Component {
             <div className="accordion-item">
                 <h2 className="accordion-header" id={`panelsStayOpen-heading${number}`}>
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#panelsStayOpen-collapse${number}`} aria-expanded="false" aria-controls={`panelsStayOpen-collapse${number}`}>
-                        {this.props.goals.goal}
+                        {this.props.goals.name}
                     </button>
                 </h2>
                 <div id={`panelsStayOpen-collapse${number}`} class="accordion-collapse collapse" aria-labelledby={`panelsStayOpen-heading${number}`}>
