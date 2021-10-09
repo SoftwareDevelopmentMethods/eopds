@@ -14,12 +14,10 @@ class GoalManager extends Component {
             strategies: [],
             selectedActivities: []
         };
-
         this.goalsChangeHandler = this.goalsChangeHandler.bind(this);
         this.activityChangeHandler = this.activityChangeHandler.bind(this);
     }
 
-    // update only one goal for onboarder needs to be worked on
     goalsChangeHandler = (event) => {
         let val = event.target.value;
         let goalID = event.target.goalID;
@@ -29,13 +27,10 @@ class GoalManager extends Component {
         }
 
         let goalDeselected = !event.target.checked;
-
         //load the activities and strategies list
         let activityList = this.props.goal.find(e => e.goal === val);
         let strategyList = this.props.goal.find(e => e.goal === val);
-
         let filteredGoals = this.state.goals.filter(goal => goal.name !== val);
-
         // filter the activities and strategies so that only unique activites are loaded (no duplicates)
         let filteredActivites;
         let filteredStrategies;
@@ -46,7 +41,6 @@ class GoalManager extends Component {
             filteredStrategies = this.state.strategies.filter(str => !strategyList.strategy.includes(str));
             //then update the state with the filtered activites array
             this.setState({ goals: filteredGoals, activities: filteredActivites, strategies: filteredStrategies });
-            // this.setState({ goals: filteredGoals});
         }
         else
             this.setState(prevState => ({
@@ -66,37 +60,20 @@ class GoalManager extends Component {
 
         let activtiyDeselected = !event.target.checked;
 
-        //let filteredGoals = this.state.goals.filter(goal => goal.name !== val);
-
-        // filter the activities and strategies so that only unique activites are loaded (no duplicates)
-        // let filteredActivites = this.state.activities.filter(act => !activityList.activity.includes(act));
-        //  let filteredStrategies = this.state.strategies.filter(str => !strategyList.strategy.includes(str));
-
         if (activtiyDeselected) {
-            // filter out the deselected activity
-            //let filteredActivites = this.state.selectedActivities.filter(act => !this.state.selectedActivities.includes(act));
             let filteredActivites = this.state.selectedActivities.filter(act => act.name !== val);
-            // let filteredStrategies = this.state.strategies.filter(str => !strategyList.strategy.includes(str));
-            //then update the state with the filtered activites array
             this.setState({ selectedActivities: filteredActivites });
-            // this.setState({ goals: filteredGoals});
         }
         else
             this.setState(prevState => ({
-                // goals: [...prevState.goals, selectedGoal],
                 selectedActivities: [...prevState.selectedActivities, selectedActivity]
-                //  strategies: [...new Set([...prevState.strategies, ...strategyList.strategy])]
             }));
     }
 
-
     render() {
-
         return (
             <div class="manager">
-
                 <h1>Program Designer</h1>
-
                 {/* profile card code */}
                 <div class="card">
                     <div class="card-body">
@@ -104,7 +81,6 @@ class GoalManager extends Component {
                         <h2>Selected Goals</h2>
                     </div>
                 </div>
-
                 {/* TabbedContainer card code */}
                 <div class="card">
                     <div class="card-body iterations-container">
@@ -118,8 +94,6 @@ class GoalManager extends Component {
                         </ul>
                     </div>
                 </div>
-
-
                 {/* checklist goals */}
                 <div class="container">
                     <div class="row">

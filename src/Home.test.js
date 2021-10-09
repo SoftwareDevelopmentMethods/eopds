@@ -8,8 +8,8 @@ it("Home component renders without crashing", () => {
 
 it("renders Home links", () => {
     const wrapper = shallow(<Home />);
-    const name = wrapper.find('h5').text();
+    const header = <h5 class="card-title">EOPDS</h5>;
 
     expect(wrapper.find("img").prop("src")).toEqual('logo.png');
-    expect(wrapper.contains(name)).toEqual(true);
+    expect(wrapper.contains(header)).toEqual(true);
 });
