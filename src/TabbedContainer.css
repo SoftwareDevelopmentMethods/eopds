@@ -1,0 +1,11 @@
+button{
+    margin-right:10px;
+}
+
+.add-tab-button{
+    background-color: rgb(122, 202, 122);
+}
+
+.delete-tab-button{
+    background-color: rgb(255, 80, 80);
+}

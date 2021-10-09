@@ -27,9 +27,12 @@ class GoalManager extends Component {
         }
 
         let goalDeselected = !event.target.checked;
+
+
         //load the activities and strategies list
-        let activityList = this.props.goal.find(e => e.goal === val);
-        let strategyList = this.props.goal.find(e => e.goal === val);
+        let activityList = this.props.goal.find(e => e.name === val);
+        let strategyList = this.props.goal.find(e => e.name === val);
+
         let filteredGoals = this.state.goals.filter(goal => goal.name !== val);
         // filter the activities and strategies so that only unique activites are loaded (no duplicates)
         let filteredActivites;
@@ -78,13 +81,11 @@ class GoalManager extends Component {
                 <div class="card">
                     <div class="card-body">
                         <Profile name={this.state.name} />
-                        <h2>Selected Goals</h2>
                     </div>
                 </div>
                 {/* TabbedContainer card code */}
                 <div class="card">
                     <div class="card-body iterations-container">
-                        <h2>Iterations Plan</h2>
                         <TabbedContainer activities={this.state.activities} />
                         <ul class="list-group">
                             {this.state.selectedActivities.map((selectedActivity, i) => (
@@ -102,9 +103,9 @@ class GoalManager extends Component {
                             {this.props.goal.map((g, i) => (
                                 <div key={"keyGoal" + g.id} id={"GID" + g.id}>
                                     <div class="text-start form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" value={g.goal} goalsindex={i}
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" value={g.name} goalsindex={i}
                                             onChange={this.goalsChangeHandler} />
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">{g.goal}</label>
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">{g.name}</label>
                                     </div>
                                 </div>
                             ))}
