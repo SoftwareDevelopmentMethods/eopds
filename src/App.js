@@ -25,7 +25,7 @@ class App extends Component {
         let loadedGoals = [];
 
         axios
-            .get("http://localhost:5000/record/")
+            .get("https://eopds.herokuapp.com/record/")
             .then((response) => {
 
                 let goalsFromDB = response.data;
