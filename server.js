@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 const app = express();
 const cors = require("cors");
 require("dotenv").config({ path: "./src/server/config.env" });
@@ -22,5 +23,6 @@ app.listen(port, () => {
         if (err) console.error(err);
 
     });
+
     console.log(`Server is running on port: ${port}`);
 });

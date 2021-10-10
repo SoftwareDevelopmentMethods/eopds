@@ -10,11 +10,11 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {goals:[]};
+        this.state = { goals: [] };
         let selectedGoal = {
             id: 404,
             name: "Error connecting to database",
-            activity:[],
+            activity: [],
             strategy: []
         }
         this.state.goals.push(selectedGoal);
@@ -25,7 +25,7 @@ class App extends Component {
         let loadedGoals = [];
 
         axios
-            .get("https://eopds.herokuapp.com/record/")
+            .get("/record")
             .then((response) => {
 
                 let goalsFromDB = response.data;
@@ -40,7 +40,7 @@ class App extends Component {
                 });
                 this.setState({ goals: Object.values(loadedGoals) });
             })
-            .catch(function (error) { 
+            .catch(function (error) {
                 console.log(error);
             });
     }
